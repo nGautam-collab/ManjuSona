@@ -1,0 +1,202 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Manju Baby ❤️</title>
+
+<style>
+
+body{
+margin:0;
+background:linear-gradient(black,#020b30);
+color:white;
+font-family:Arial;
+text-align:center;
+overflow:hidden;
+}
+
+/* stars */
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.3}
+to{opacity:1}
+}
+
+/* hearts */
+
+.heart{
+position:absolute;
+font-size:18px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh)}
+100%{transform:translateY(-10vh)}
+}
+
+/* roses */
+
+.rose{
+position:absolute;
+font-size:18px;
+animation: fall 7s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh)}
+100%{transform:translateY(100vh)}
+}
+
+h1{
+margin-top:40px;
+color:#ff4da6;
+font-size:40px;
+}
+
+/* gift */
+
+.gift{
+font-size:70px;
+margin-top:40px;
+cursor:pointer;
+}
+
+/* envelope */
+
+.envelope{
+font-size:60px;
+cursor:pointer;
+margin-top:20px;
+}
+
+/* cake */
+
+.cake{
+font-size:80px;
+margin-top:20px;
+}
+
+/* teddy */
+
+.teddy{
+font-size:70px;
+margin-top:20px;
+}
+
+/* popup */
+
+.popup{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:10px 15px;
+border-radius:20px;
+color:white;
+font-size:16px;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Happy Birthday Manju Baby ❤️</h1>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+<div id="surprise" style="display:none">
+<p style="font-size:22px">You are the most beautiful part of my life ❤️</p>
+</div>
+
+<div class="envelope" onclick="openLetter()">💌</div>
+
+<div id="letter" style="display:none">
+<p>
+Meeting you was the best thing that ever happened to me.<br>
+I hope your birthday is full of love and happiness.<br>
+I love you forever ❤️
+</p>
+</div>
+
+<div class="cake">🎂</div>
+
+<div class="teddy">🧸 Happy Birthday!</div>
+
+<div class="popup" id="popup">I love you ❤️</div>
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3a0bbf9e03.mp3">
+</audio>
+
+<script>
+
+/* stars */
+
+for(let i=0;i<120;i++){
+let star=document.createElement("div")
+star.className="star"
+star.style.left=Math.random()*100+"vw"
+star.style.top=Math.random()*100+"vh"
+document.body.appendChild(star)
+}
+
+/* hearts */
+
+for(let i=0;i<30;i++){
+let heart=document.createElement("div")
+heart.className="heart"
+heart.innerHTML="❤️"
+heart.style.left=Math.random()*100+"vw"
+document.body.appendChild(heart)
+}
+
+/* roses */
+
+for(let i=0;i<25;i++){
+let rose=document.createElement("div")
+rose.className="rose"
+rose.innerHTML="🌹"
+rose.style.left=Math.random()*100+"vw"
+document.body.appendChild(rose)
+}
+
+/* popup */
+
+setInterval(()=>{
+let p=document.getElementById("popup")
+p.style.display="block"
+setTimeout(()=>{p.style.display="none"},2000)
+},5000)
+
+/* birthday popup */
+
+setTimeout(()=>{
+alert("Manju Baby ❤️ Happy Birthday 🎂")
+},1200)
+
+function openGift(){
+document.getElementById("surprise").style.display="block"
+}
+
+function openLetter(){
+document.getElementById("letter").style.display="block"
+}
+
+</script>
+
+</body>
+</html>
+```
